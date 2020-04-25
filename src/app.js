@@ -75,7 +75,7 @@ app.get('/weather', (req, res) => {
             res.send({
                 address: req.query.address,
                 location,
-                forecast: "It's currently " + currentDesc + ' with a temperature of ' + currentTemp + 'C and a real feel of ' + currentFeel + 'C.'
+                forecast: "It's currently " + currentDesc + ' with a temperature of ' + currentTemp + 'C and a real feel of ' + currentFeel + 'C. Current humidity is ' + currentHumi + '%.'
             })
         })
     })

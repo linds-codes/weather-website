@@ -12,10 +12,12 @@ const forecast = (latitude, longitude, callback) => {
             const currentTemp = body.current.temperature
             const currentFeel = body.current.feelslike
             const currentDesc = body.current.weather_descriptions[0].toLowerCase()
+            const currentHumi = body.current.humidity
             callback(undefined, {
                 currentTemp,
                 currentFeel,
-                currentDesc
+                currentDesc,
+                currentHumi
             })
         }
     })
