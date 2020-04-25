@@ -1,6 +1,3 @@
-// Log confirmation of successful client side start
-console.log('Client side javascript file is loaded')
-
 // Set constants for reference
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
