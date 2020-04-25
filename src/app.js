@@ -12,6 +12,7 @@ const hbs = require('hbs')
 // Setup express
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 3000
 
 // Include the required weather and geocode modules
 const geocode = require('./utils/geocode')
@@ -80,18 +81,6 @@ app.get('/weather', (req, res) => {
     })
 })
 
-// app.get('/products', (req, res) => {
-//     if (!req.query.search) {
-//         return res.send({
-//             error: 'No search term provided'
-//         })
-//     }
-//     console.log(req.query)
-//     res.send({
-//         products: []
-//     })
-// })
-
 // Help 404
 app.get('/help/*', (req, res) => {
     res.render('404', {
@@ -109,6 +98,6 @@ app.get('*', (req, res) => {
 })
 
 // Port listening
-app.listen(3000, () => {
-    console.log('Server running - listening on port 3000.')
+app.listen(port, () => {
+    console.log('Server running - listening on port ' + port + '.')
 })
